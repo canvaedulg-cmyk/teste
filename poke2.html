@@ -1,0 +1,245 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Hub - O Maior Portal Pokémon! 🐉</title>
+    <meta name="description" content="Descubra todos os Pokémon, batalhe, colecione e viva a aventura!">
+    <link rel="stylesheet" href="poke.css">
+    <link rel="icon" href="data:image/svg+xml,svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTgiIGZpbGw9IiNGRjAwMDAiLz4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTAiIGZpbGw9IiNGRkYiLz4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iOCIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K" alt="Pokéball" class="pokeball-logo">
+                <span>Pokémon Hub</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">🏠 Início</a></li>
+             
+                
+                <li><a href="#types" class="nav-link">🎨 Tipos</a></li>
+                <li><a href="#battle" class="nav-link">⚔️ Batalha</a></li>
+                <li><a href="#pokedex" class="nav-link">📱 Pokédex</a></li>
+            </ul>
+            
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Bem-vindo ao <span class="gradient-text">Pokémon Hub</span></h1>
+            <p class="hero-subtitle">O maior portal Pokémon do Brasil! Descubra, colecione e batalhe com mais de 1000 Pokémon!</p>
+            <div class="hero-buttons">
+              
+            </div>
+        </div>
+        <div class="hero-pokemon">
+            <img src="mewtwo-sprite.gif" alt="Pikachu" class="floating-pikachu">
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🐉</div>
+                    <h3>1.000.000+</h3>
+                    <p>Pokémon Disponíveis</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎨</div>
+                    <h3>18</h3>
+                    <p>Tipos Diferentes</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚔️</div>
+                    <h3>9</h3>
+                    <p>Gerções</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <h3>4.9</h3>
+                    <p>Nota dos Treinadores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -
+    <div class="container">
+        <!-- Search Section --
+        <section id="pokemon" class="search-section">
+            <div class="section-header">
+                <h2>🔍 Encontre seu Pokémon</h2>
+                <p>Busque por nome, número ou tipo</p>
+            </div>
+            
+            <div class="search-controls">
+                <input type="text" class="search-input" id="searchInput" placeholder="Digite o nome do Pokémon (Pikachu, Charizard...)">
+                <select id="typeFilter" class="filter-select">
+                    <option value="">Todos os Tipos</option>
+                    <option value="fire">🔥 Fogo</option>
+                    <option value="water">💧 Água</option>
+                    <option value="grass">🌿 Grama</option>
+                    <option value="electric">⚡ Elétrico</option>
+                </select>
+                <button class="btn btn-outline" id="clearFilters">Limpar Filtros</button>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="pokeball"></div>
+                Carregando Pokémon...
+            </div>
+
+            <div class="pokemon-grid" id="pokemonGrid"></div>
+            <div class="load-more" id="loadMoreBtn">Carregar Mais Pokémon</div>
+        </section>
+
+        <!-- Types Section --
+        <section id="types" class="types-section">
+            <div class="section-header">
+                <h2>🎨 Sistema de Tipos</h2>
+                <p>Aprenda as fraquezas e resistências de cada tipo</p>
+                
+    <ul>
+        <li>⚪ Normal — Fraqueza: Lutador</li>
+        <li>🔥 Fogo — Fraqueza: Água, Terra, Pedra</li>
+        <li>💧 Água — Fraqueza: Elétrico, Planta</li>
+        <li>🌿 Planta — Fraqueza: Fogo, Gelo, Voador, Inseto</li>
+        <li>⚡ Elétrico — Fraqueza: Terra</li>
+        <li>❄️ Gelo — Fraqueza: Fogo, Lutador, Pedra, Aço</li>
+        <li>🥊 Lutador — Fraqueza: Psíquico, Voador, Fada</li>
+        <li>☠️ Veneno — Fraqueza: Terra, Psíquico</li>
+        <li>🌎 Terra — Fraqueza: Água, Planta, Gelo</li>
+        <li>🕊️ Voador — Fraqueza: Elétrico, Gelo, Pedra</li>
+        <li>🧠 Psíquico — Fraqueza: Inseto, Fantasma, Sombrio</li>
+        <li>🐛 Inseto — Fraqueza: Fogo, Voador, Pedra</li>
+        <li>🪨 Pedra — Fraqueza: Água, Planta, Lutador, Terra, Aço</li>
+        <li>👻 Fantasma — Fraqueza: Fantasma, Sombrio</li>
+        <li>🐉 Dragão — Fraqueza: Gelo, Dragão, Fada</li>
+        <li>🌑 Sombrio — Fraqueza: Lutador, Inseto, Fada</li>
+        <li>⚙️ Aço — Fraqueza: Fogo, Lutador, Terra</li>
+        <li>✨ Fada — Fraqueza: Veneno, Aço</li>
+    </ul>
+            </div>
+            <div class="types-grid" id="typesGrid"></div>
+        </section>
+    </div>
+
+    <!-- Battle Arena -
+    <section id="battle" class="battle-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚔️ Arena de Batalha</h2>
+                <p>Monte seu time e desafie outros treinadores!</p>
+            </div>
+            <div class="battle-arena">
+                <div class="battle-player">
+                    <h3>Seu Pokémon</h3>
+                    <div class="battle-pokemon" id="playerPokemon">
+                        <img src="deoxys-pokémon.gif" alt="">
+                        <span>Escolha seu Pokémon</span>
+                    </div>
+                </div>
+                <div class="battle-vs">VS</div>
+                <div class="battle-enemy">
+                    <h3>Inimigo</h3>
+                    <div class="battle-pokemon" id="enemyPokemon">
+                        <img src="rayquaza-corrupted.gif" alt="">
+                        <span>Pokémon Lendario</span>
+                    </div>
+                </div>
+            </div>
+            <div class="battle-controls">
+                <button class="btn btn-danger" onclick="battleRandom()">Batalha Rápida</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pokedex Download --
+    <section id="pokedex" class="pokedex-section">
+        <div class="container">
+            <div class="pokedex-promo">
+                <div class="pokedex-image">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDIwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjIwIiB5PSIyMCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyNjAiIHJ4PSIyMCIgZmlsbD0iI0ZGQjAwMCIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIyNTAiIHI9IjMwIiBmaWxsPSIjRkYwMDAwIi8+Cjwvc3ZnPgo=" alt="Pokédex" class="pokedex-img">
+                </div>
+                <div class="pokedex-info">
+                    <h2>📱 Baixe nossa Pokédex!</h2>
+                    <p>Leve todos os Pokémon no seu bolso!</p>
+                    <div class="pokedex-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=pt_BR" class="btn btn-primary">Android APK</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=pt_BR" class="btn btn-secondary">iOS App</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer --
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pokémon Hub</h3>
+                    <p>O melhor lugar para treinadores Pokémon!</p>
+                    <div class="social-links">
+                        <a href="https://x.com/Pokemon">🐤 Twitter</a>
+                        <a href="https://www.facebook.com/Pokemon/">📘 Facebook</a>
+                        <a href="https://www.youtube.com/@PokemonOficialPT">📺 YouTube</a>
+                        <a href="https://discord.com/invite/pokemon">💬 Discord</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#pokemon">Pokémon</a></li>
+                        <li><a href="#types">Tipos</a></li>
+                        <li><a href="#battle">Batalha</a></li>
+                        <li><a href="#pokedex">Pokédex</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Ajuda</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Termos</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pokémon Hub. Feito com ❤️ para treinadores. Todos os direitos das imagens pertencem à Pokémon Company.</p>
+            </div>
+        </div>
+    </footer
+    <!-- Modal --
+    <div class="modal" id="pokemonModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <img id="modalSprite" class="big-sprite" src="" alt="">
+            <h2 id="modalName"></h2>
+            <div id="modalTypes"></div>
+            <div class="stats-section">
+                <h3>📊 Stats Base</h3>
+                <div id="modalStats"></div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="addToTeam(currentPokemon)">Adicionar ao Time</button>
+                <button class="btn btn-secondary" onclick="sharePokemon(currentPokemon)">Compartilhar</button>
+            </div>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+<script src="poke.js"></script>
+</body>
+</html> -->

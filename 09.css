@@ -1,0 +1,643 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.noticias {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.motor {
+    display: flex;
+    animation: movimentar 5s linear infinite;
+    will-change: transform;
+}
+
+.conteudo {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.conteudo span {
+    font-size: clamp(24px, 5vw, 50px);
+    padding-right: 50px;
+    font-weight: bolder;
+    white-space: nowrap;
+}
+
+@keyframes movimentar {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.333%);
+    }
+}
+
+/* CAMADA DE FUNDO COM IMAGEM */
+.fundo {
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+}
+
+/* Corpo da página */
+body {
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: azure;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    background-color: #1a1a1a;
+    background-image: radial-gradient(#333 20%, transparent 20%);
+    background-size: 20px 20px;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ================= MENU SUPERIOR ================= */
+
+.topo {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 20px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* ================= MENU DIREITA ================= */
+
+.menu-direita {
+    display: flex;
+    gap: 20px;
+}
+
+/* ================= MENU ================= */
+
+.menu {
+    width: 100%;
+    background-color: #000000;
+
+    padding: 10px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: yellow;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* ================= TÍTULO ================= */
+
+h1 {
+    /* margin: 20px; */
+    text-align: center;
+
+    font-size: clamp(1em, 10vw, 3em);
+
+    text-shadow: 2px 2px 5px black;
+}
+
+/* ================= BOTÃO ================= */
+
+button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    visibility: hidden;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    gap: 20px;
+    padding: 20px;
+}
+
+.cardgeral {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    /* /* border: 2px solid rgb(255, 255, 255); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+    width: 280px;
+    align-items: center;
+}
+
+.cardgeral:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.cardgeral img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ================= CARD ================= */
+.cardTerrestre {
+    background-color: rgb(194, 139, 58);
+}
+
+
+
+
+.addcarrinhoTerrestre {
+    background-color: rgb(234, 179, 98);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: #333;
+    font-weight: bold;
+    border: solid rgb(129, 99, 55);
+}
+
+.cardLutador {
+    background-color: rgb(200, 80, 60);
+}
+
+
+
+
+.addcarrinhoLutador {
+    background-color: rgb(230, 100, 80);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: white;
+    font-weight: bold;
+    border: solid rgb(135, 63, 31);
+}
+
+.cardPsiquico {
+    background-color: rgb(240, 100, 140);
+
+}
+
+
+
+
+
+.addcarrinhoPsiquico {
+    background-color: rgb(255, 130, 170);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: white;
+    font-weight: bold;
+    border: solid rgb(180, 97, 124);
+}
+
+.cardPlanta {
+    background-color: rgb(80, 180, 80);
+
+}
+
+
+
+
+.addcarrinhoPlanta {
+    background-color: rgb(100, 210, 100);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: white;
+    font-weight: bold;
+    border: solid rgb(55, 116, 55);
+}
+
+.cardNormal {
+    background-color: rgb(160, 160, 160);
+
+}
+
+
+
+
+.addcarrinhoNormal {
+    background-color: rgb(190, 190, 190);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: #222;
+    font-weight: bold;
+    border: solid rgb(87, 87, 87);
+}
+
+.cardInseto {
+    background-color: rgb(120, 180, 80);
+
+}
+
+
+
+.addcarrinhoInseto {
+    background-color: rgb(150, 210, 100);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: #333;
+    font-weight: bold;
+    border: solid rgb(78, 110, 52);
+}
+
+.cardGelo {
+    background-color: rgb(100, 200, 255);
+
+}
+
+
+.addcarrinhoGelo {
+    background-color: rgb(140, 220, 255);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: #003366;
+    font-weight: bold;
+    border: solid rgb(79, 127, 148);
+}
+
+.cardFantasma {
+    background-color: rgb(90, 70, 120);
+
+}
+
+
+
+
+.addcarrinhoFantasma {
+    background-color: rgb(130, 100, 170);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: white;
+    font-weight: bold;
+    border: solid rgb(79, 61, 104);
+}
+
+.cardFada {
+    background-color: rgb(255, 140, 200);
+
+}
+
+
+.addcarrinhoFada {
+    background-color: rgb(255, 170, 220);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: #333;
+    font-weight: bold;
+    border: solid rgb(166, 111, 143);
+}
+
+.cardEletrico {
+    background-color: rgb(255, 200, 50);
+}
+
+
+
+.addcarrinhoEletrico {
+    background-color: rgb(255, 220, 80);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: #333;
+    font-weight: bold;
+    border: solid rgb(182, 158, 63);
+}
+
+.carddragao {
+    background-color: rgb(100, 60, 220);
+
+}
+
+
+
+
+.addcarrinhodragao {
+    background-color: rgb(140, 90, 255);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: white;
+    font-weight: bold;
+    border: solid rgb(68, 44, 125);
+}
+
+.card {
+    background-color: rgb(120, 160, 180);
+
+}
+
+
+
+.addcarrinho {
+    background-color: rgb(160, 200, 220);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: #222;
+    font-weight: bold;
+    border: solid rgb(84, 102, 112);
+}
+
+.cardAgua {
+    background-color: rgb(80, 160, 255);
+
+}
+
+.addcarrinhoagua {
+    background-color: rgb(100, 200, 255);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: #003366;
+    font-weight: bold;
+    border: solid rgb(66, 130, 165);
+}
+
+.cardVeneno {
+    background-color: rgb(167, 85, 199);
+}
+
+
+
+
+.addcarrinhoVeneno {
+    background-color: rgb(200, 120, 230);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: white;
+    font-weight: bold;
+    border: solid rgb(132, 79, 151);
+}
+
+.cardFogo {
+    background-color: rgb(240, 80, 40);
+    /* Vermelho/Laranja flamejante */
+
+}
+
+
+
+
+.addcarrinhoFogo {
+    background-color: rgb(255, 120, 50);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: white;
+    font-weight: bold;
+    border: solid rgb(134, 65, 30);
+}
+
+.cardPedra {
+    background-color: rgb(160, 140, 100);
+    /* Cor terrosa/rochosa */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    /* border: 2px solid rgb(255, 255, 255); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+
+
+
+.addcarrinhoPedra {
+    background-color: rgb(200, 170, 120);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: #333;
+    font-weight: bold;
+    border: solid rgb(109, 94, 66);
+}
+
+.cardSombrio {
+    background-color: rgb(85, 60, 110);
+
+}
+
+
+.addcarrinhoSombrio {
+    background-color: rgb(60, 40, 80);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.cardVoador {
+    background-color: rgb(135, 206, 250);
+
+}
+
+
+
+
+.addcarrinhoVoador {
+    background-color: rgb(100, 180, 255);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    visibility: visible;
+    color: #003366;
+    font-weight: bold;
+    border: solid rgb(53, 93, 131);
+}
+
+.imgcarrinho {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+}
+
+.preco {
+    color: white;
+}
+
+/* ================= SEÇÃO SOBRE ================= */
+
+.sobre {
+    width: 90%;
+    max-width: 800px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    padding: 20px;
+    margin-top: 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.sobre h2 {
+    margin-bottom: 10px;
+}
+
+.sobre p {
+    line-height: 1.5;
+}
+
+
+/* ================= RODAPÉ ================= */
+
+footer {
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+
+    margin-top: 30px;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 768px) {
+
+    button {
+        visibility: visible;
+    }
+
+    .topo {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}

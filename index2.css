@@ -1,0 +1,217 @@
+/* Centraliza todo o conteúdo na tela */ 
+html, body { 
+  height: 100%; 
+  margin: 0; 
+} 
+
+body { 
+  font-family: 'Arial Black', Gadget, sans-serif; 
+  background-color: #1a1a1a; 
+  background-image: radial-gradient(#333 20%, transparent 20%); 
+  background-size: 20px 20px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px; 
+  box-sizing: border-box; 
+} 
+
+/* Container estilo Pokédex / Pokémart */ 
+.formulario-compra { 
+  width: 100%; 
+  max-width: 420px; 
+  background: #dc3545; 
+  padding: 25px; 
+  border-radius: 20px; 
+  border: 8px solid #333; 
+  box-shadow: 0 10px 0 #000, 0 15px 20px rgba(0,0,0,0.5); 
+  position: relative; 
+  box-sizing: border-box; 
+} 
+
+/* Detalhe da luz da Pokédex */ 
+.formulario-compra::before { 
+  content: ""; 
+  position: absolute; 
+  top: -15px; 
+  left: 20px; 
+  width: 30px; 
+  height: 30px; 
+  background-color: #007bff; 
+  border: 4px solid #fff; 
+  border-radius: 50%; 
+  box-shadow: 0 0 10px #007bff; 
+} 
+
+/* Tela interna onde ficam os campos */ 
+.tela-interna { 
+  background-color: #2b2b2b; 
+  padding: 20px; 
+  border-radius: 10px; 
+  border: 4px solid #222; 
+} 
+
+.campo-grupo { 
+  margin-bottom: 18px; 
+} 
+
+.campo-grupo label { 
+  display: block; 
+  margin-bottom: 6px; 
+  color: #ffcb05; 
+  font-size: 13px; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  text-shadow: 2px 2px 0px #3b4cca; 
+} 
+
+.campo-grupo input, .campo-grupo select { 
+  width: 100%; 
+  padding: 12px; 
+  font-size: 14px; 
+  background-color: #fff; 
+  border: 3px solid #3b4cca; 
+  border-radius: 8px; 
+  box-sizing: border-box; 
+  font-weight: bold; 
+  color: #333; 
+} 
+
+.campo-grupo input:focus, .campo-grupo select:focus { 
+  outline: none; 
+  border-color: #ffcb05; 
+  background-color: #fffde6; 
+} 
+
+/* Botão estilo Insígnia / Escolha */ 
+.botao-container { 
+  margin-top: 25px; 
+} 
+
+.btn-finalizar { 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 100%; 
+  background-color: #ffcb05; 
+  color: #3b4cca; 
+  padding: 15px; 
+  font-size: 18px; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  border-radius: 10px; 
+  border: 4px solid #3b4cca; 
+  box-shadow: 0 5px 0 #2a3795; 
+  transition: transform 0.1s ease, background-color 0.2s ease; 
+  box-sizing: border-box; 
+  cursor: pointer; 
+  font-family: 'Arial Black', Gadget, sans-serif; 
+} 
+
+.btn-finalizar:hover { 
+  background-color: #ffe169; 
+  transform: translateY(-2px); 
+} 
+
+.btn-finalizar:active { 
+  transform: translateY(3px); 
+  box-shadow: 0 2px 0 #2a3795; 
+} 
+
+/* Ícone do carrinho (Pokébola em CSS) */ 
+.imgcarrinho { 
+  margin-right: 12px; 
+  display: inline-block; 
+  width: 18px; 
+  height: 18px; 
+  background: linear-gradient(#dc3545 45%, #333 45%, #333 55%, #fff 55%); 
+  border: 2px solid #333; 
+  border-radius: 50%; 
+  position: relative; 
+} 
+
+.imgcarrinho::after { 
+  content: ""; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 6px; 
+  height: 6px; 
+  background-color: #fff; 
+  border: 2px solid #333; 
+  border-radius: 50%; 
+} 
+
+/* Classe para esconder elementos */ 
+.escondido { 
+  display: none !important; 
+} 
+
+/* Estilo da tela de sucesso */ 
+.tela-sucesso { 
+  background-color: #28a745; 
+  padding: 30px 20px; 
+  border-radius: 10px; 
+  border: 4px solid #1e7e34; 
+  color: #ffffff; 
+  text-shadow: 2px 2px 0px #000; 
+  text-align: center; 
+} 
+
+.titulo-sucesso { 
+  color: #ffcb05; 
+  font-size: 20px; 
+  text-transform: uppercase; 
+  margin-top: 0; 
+  margin-bottom: 20px; 
+  text-shadow: 3px 3px 0px #3b4cca; 
+} 
+
+.mensagem-texto {
+  font-family: Arial, sans-serif; 
+  font-weight: bold; 
+  line-height: 1.6; 
+  margin: 0;
+}
+
+#nomeTreinador {
+  color: #ffcb05;
+}
+
+.prazo-destaque { 
+  display: block; 
+  color: #ffcb05; 
+  font-size: 24px; 
+  margin-top: 15px; 
+  text-shadow: 2px 2px 0px #3b4cca; 
+} 
+
+.pokebola-animada { 
+  width: 50px; 
+  height: 50px; 
+  background: linear-gradient(#dc3545 45%, #333 45%, #333 55%, #fff 55%); 
+  border: 4px solid #333; 
+  border-radius: 50%; 
+  position: relative; 
+  margin: 0 auto 20px auto; 
+  animation: balancar 0.6s ease-in-out infinite alternate; 
+} 
+
+.pokebola-animada::after { 
+  content: ""; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 14px; 
+  height: 14px; 
+  background-color: #fff; 
+  border: 4px solid #333; 
+  border-radius: 50%; 
+} 
+
+@keyframes balancar { 
+  from { transform: rotate(-15deg); } 
+  to { transform: rotate(15deg); } 
+}
